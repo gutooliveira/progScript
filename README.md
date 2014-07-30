@@ -1,4 +1,5 @@
 progScript
 ==========
 
-Repositório para a matéria Programação em Script, do curso de Análise e Desenvolvimento de Sistemas, FATEC de São José dos Campos.
+README EDITADO
+Repositório destinado aos exercícios e projeto da matéria "Programação em scripts" da FATEC Professor Jessen Vidal, São José dos Campos - SP.
