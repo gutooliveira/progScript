@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=D:\repositorios\progScript\backend\venv"
+set "VIRTUAL_ENV=D:\repositorios\progScript\tekton-master\backend\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
