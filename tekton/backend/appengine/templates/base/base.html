@@ -37,7 +37,25 @@
     {% block js %}{% endblock %}
 </head>
 <body>
-<div class="navbar-wrapper">
+
+<header class="blue" style="height: 350px;">
+    <nav class="col-md-12" style="height: 100px;">
+        <!--
+            <div class="col-md-12"></div>
+        -->
+        <ul>
+
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+    {% block body %}{% endblock %}
+</main>
+
+<footer></footer>
+<div class="navbar-wrapper none">
     <div class="navbar navbar-inverse navbar-static-top">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -79,8 +97,8 @@
         </div>
     </div>
 </div>
-{% block body %}{% endblock %}
-<div class="footer">
+
+<div class="footer none">
     <div class="container">
         <p class="text-muted text-right">Tekton Full-Stack: <a target="_blank" href="https://github.com/renzon/tekton-fullstack">Git Hub</a></p>
     </div>
