@@ -63,32 +63,49 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../../sass/components/core/_variables.scss */
+/* line 5, ../../sass/core/_variables.scss */
 .red {
   background-color: red;
 }
 
-/* line 8, ../../sass/components/core/_variables.scss */
+/* line 9, ../../sass/core/_variables.scss */
 .blue {
   background-color: blue;
 }
 
-/* line 12, ../../sass/components/core/_variables.scss */
+/* line 13, ../../sass/core/_variables.scss */
 .green {
   background-color: green;
 }
 
-/* line 16, ../../sass/components/core/_variables.scss */
+/* line 17, ../../sass/core/_variables.scss */
 .yellow {
   background-color: yellow;
 }
 
-/* line 20, ../../sass/components/core/_variables.scss */
+/* line 21, ../../sass/core/_variables.scss */
 .none {
   display: none;
 }
 
-/* line 1, ../../sass/components/core/_header.scss */
+/* line 1, ../../sass/components/_header.scss */
 header {
   background-color: #000;
+}
+
+/* line 5, ../../sass/components/_header.scss */
+.vv-header {
+  background-image: url('../img/header/header-bg.jpg?1348649170');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  height: 154px;
+}
+
+/* line 13, ../../sass/components/_header.scss */
+.vv-header-bar {
+  background-color: #44bc98;
+  height: 25px;
+  opacity: 0.6;
+  border-bottom: 1px solid #43bb97;
 }

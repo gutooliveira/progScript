@@ -1,0 +1,18 @@
+header {
+  background-color: $black;
+}
+
+.vv-header {
+  background-image: image-url("header/header-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $black;
+  height: 154px;
+}
+
+.vv-header-bar {
+  background-color: $green;
+  height: 25px;
+  opacity: 0.6;
+  border-bottom: 1px solid darken($green, .5);
+}
