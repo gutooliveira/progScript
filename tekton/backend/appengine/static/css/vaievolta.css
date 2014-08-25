@@ -88,24 +88,369 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: none;
 }
 
-/* line 1, ../../sass/components/_header.scss */
-header {
-  background-color: #000;
+/* line 3, ../../sass/components/_css-properties.scss */
+.position-static {
+  position: static;
 }
 
-/* line 5, ../../sass/components/_header.scss */
+/* line 7, ../../sass/components/_css-properties.scss */
+.position-absolute {
+  position: absolute;
+}
+
+/* line 11, ../../sass/components/_css-properties.scss */
+.position-relative {
+  position: relative;
+}
+
+/* line 15, ../../sass/components/_css-properties.scss */
+.position-fixed {
+  position: fixed;
+}
+
+/* line 23, ../../sass/components/_css-properties.scss */
+.normal {
+  font-weight: normal;
+}
+
+/* line 27, ../../sass/components/_css-properties.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 31, ../../sass/components/_css-properties.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 35, ../../sass/components/_css-properties.scss */
+.align-left {
+  text-align: left;
+}
+
+/* line 39, ../../sass/components/_css-properties.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 43, ../../sass/components/_css-properties.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 47, ../../sass/components/_css-properties.scss */
+.align-justify {
+  text-align: justify;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 53, ../../sass/components/_css-properties.scss */
+.align-center {
+  text-align: center !important;
+}
+
+/* line 57, ../../sass/components/_css-properties.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 65, ../../sass/components/_css-properties.scss */
+.display-block {
+  display: block !important;
+}
+
+/* line 69, ../../sass/components/_css-properties.scss */
+.display-inline {
+  display: inline !important;
+}
+
+/* line 73, ../../sass/components/_css-properties.scss */
+.display-inline-block {
+  display: inline-block !important;
+}
+
+/* line 77, ../../sass/components/_css-properties.scss */
+.display-inline-table {
+  display: inline-table !important;
+}
+
+/* line 81, ../../sass/components/_css-properties.scss */
+.display-list-item {
+  display: list-item !important;
+}
+
+/* line 85, ../../sass/components/_css-properties.scss */
+.display-none {
+  display: none;
+}
+
+/* line 89, ../../sass/components/_css-properties.scss */
+.display-table {
+  display: table !important;
+}
+
+/* line 97, ../../sass/components/_css-properties.scss */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* line 102, ../../sass/components/_css-properties.scss */
+.margin-center {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 107, ../../sass/components/_css-properties.scss */
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+/* line 112, ../../sass/components/_css-properties.scss */
+.no-border {
+  border: none;
+}
+
+/* line 116, ../../sass/components/_css-properties.scss */
+.no-border-left {
+  border-left: none !important;
+}
+
+/* line 120, ../../sass/components/_css-properties.scss */
+.no-border-top {
+  border-top: none !important;
+}
+
+/* line 124, ../../sass/components/_css-properties.scss */
+.no-border-right {
+  border-right: none !important;
+}
+
+/* line 128, ../../sass/components/_css-properties.scss */
+.no-border-bottom {
+  border-bottom: none !important;
+}
+
+/* line 131, ../../sass/components/_css-properties.scss */
+.no-border-radius-top {
+  -moz-border-radius: 0 0 3px 3px !important;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 3px 3px !important;
+}
+
+/* line 139, ../../sass/components/_css-properties.scss */
+.mid-size {
+  font-size: 13px;
+}
+
+/* line 147, ../../sass/components/_css-properties.scss */
+.va-top {
+  vertical-align: top;
+}
+
+/* line 151, ../../sass/components/_css-properties.scss */
+.va-baseline {
+  vertical-align: baseline;
+}
+
+/* line 155, ../../sass/components/_css-properties.scss */
+.va-bottom {
+  vertical-align: bottom;
+}
+
+/* line 159, ../../sass/components/_css-properties.scss */
+.va-inherit {
+  vertical-align: inherit;
+}
+
+/* line 163, ../../sass/components/_css-properties.scss */
+.va-initial {
+  vertical-align: initial;
+}
+
+/* line 167, ../../sass/components/_css-properties.scss */
+.va-middle {
+  vertical-align: middle;
+}
+
+/* line 171, ../../sass/components/_css-properties.scss */
+.va-sub {
+  vertical-align: sub;
+}
+
+/* line 175, ../../sass/components/_css-properties.scss */
+.va-super {
+  vertical-align: super;
+}
+
+/* line 179, ../../sass/components/_css-properties.scss */
+.va-text-bottom {
+  vertical-align: text-bottom;
+}
+
+/* line 183, ../../sass/components/_css-properties.scss */
+.va-text-top {
+  vertical-align: text-top;
+}
+
+/* line 191, ../../sass/components/_css-properties.scss */
+.cursor-default {
+  cursor: default;
+}
+
+/* line 195, ../../sass/components/_css-properties.scss */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* line 203, ../../sass/components/_css-properties.scss */
+.no-border {
+  border: none !important;
+}
+
+/* line 207, ../../sass/components/_css-properties.scss */
+.border-left {
+  border-left-width: 1px !important;
+}
+
+/* line 211, ../../sass/components/_css-properties.scss */
+.border-right {
+  border-right-width: 1px !important;
+}
+
+/* line 218, ../../sass/components/_css-properties.scss */
+.no-box-shadow {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* line 226, ../../sass/components/_css-properties.scss */
+.radius-left {
+  -moz-border-radius: 3px 0 0 3px !important;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 0 0 3px !important;
+}
+
+/* line 230, ../../sass/components/_css-properties.scss */
+.radius-top {
+  -moz-border-radius: 3px 3px 0 0 !important;
+  -webkit-border-radius: 3px;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+/* line 234, ../../sass/components/_css-properties.scss */
+.radius-right {
+  -moz-border-radius: 0 3px 3px 0 !important;
+  -webkit-border-radius: 0;
+  border-radius: 0 3px 3px 0 !important;
+}
+
+/* line 238, ../../sass/components/_css-properties.scss */
+.radius-bottom {
+  -moz-border-radius: 0 0 3px 3px !important;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 3px 3px !important;
+}
+
+/* line 242, ../../sass/components/_css-properties.scss */
+.radius-all {
+  -moz-border-radius: 3px !important;
+  -webkit-border-radius: 3px;
+  border-radius: 3px !important;
+}
+
+/* line 250, ../../sass/components/_css-properties.scss */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* line 1, ../../sass/components/_header.scss */
 .vv-header {
-  background-image: url('../img/header/header-bg.jpg?1348649170');
+  background-image: url('../img/header/header-picture-bg.jpg?1348649170');
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000;
-  height: 154px;
+  height: 299px;
 }
 
-/* line 13, ../../sass/components/_header.scss */
+/* line 9, ../../sass/components/_header.scss */
 .vv-header-bar {
-  background-color: #44bc98;
-  height: 25px;
-  opacity: 0.6;
+  background-image: url('../img/header/bg-header.png?1408923372');
   border-bottom: 1px solid #43bb97;
+  height: 50px;
+}
+/* line 14, ../../sass/components/_header.scss */
+.vv-header-bar .logo-header {
+  position: relative;
+  width: 113px;
+}
+/* line 18, ../../sass/components/_header.scss */
+.vv-header-bar .logo-header.active {
+  z-index: 1;
+}
+/* line 23, ../../sass/components/_header.scss */
+.vv-header-bar > .vv-nav-header {
+  float: right;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 29, ../../sass/components/_header.scss */
+.vv-header-bar .icon-reorder {
+  display: none;
+  color: #fff;
+  font-size: 46px;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 760px) {
+  /* line 9, ../../sass/components/_header.scss */
+  .vv-header-bar {
+    text-align: center;
+  }
+  /* line 40, ../../sass/components/_header.scss */
+  .vv-header-bar > .vv-nav-header {
+    width: 65px;
+  }
+  /* line 43, ../../sass/components/_header.scss */
+  .vv-header-bar > .vv-nav-header .icon-reorder {
+    display: block;
+  }
+  /* line 46, ../../sass/components/_header.scss */
+  .vv-header-bar > .vv-nav-header .icon-reorder.active {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  /* line 4, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper.active .vv-sidebar-close {
+    display: block;
+  }
+  /* line 8, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper.active .vv-sidebar {
+    background-color: #000;
+    -moz-box-shadow: -11px 0 45px #000;
+    -webkit-box-shadow: -11px 0 45px #000;
+    box-shadow: -11px 0 45px #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 200%;
+  }
+}
+
+/* line 21, ../../sass/components/_sidebar.scss */
+.vv-sidebar-close {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }

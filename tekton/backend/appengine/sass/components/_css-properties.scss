@@ -1,0 +1,252 @@
+//positions
+
+.position-static {
+  position: static;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//font properties
+
+.normal {
+  font-weight:normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-justify {
+  text-align: justify;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//displays
+
+.display-block{
+  display: block !important;
+}
+
+.display-inline {
+  display: inline !important;
+}
+
+.display-inline-block {
+  display: inline-block !important;
+}
+
+.display-inline-table {
+  display: inline-table !important;
+}
+
+.display-list-item {
+  display: list-item !important;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-table {
+  display: table !important;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+// no padding
+
+.no-padding {
+  padding: 0 !important;
+}
+
+// center with margin
+.margin-center {
+  position: relative;
+  margin: 0 auto;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+//borders
+.no-border {
+  border: none;
+}
+
+.no-border-left {
+  border-left: none !important;
+}
+
+.no-border-top {
+  border-top: none !important;
+}
+
+.no-border-right {
+  border-right: none !important;
+}
+
+.no-border-bottom {
+  border-bottom: none !important;
+}
+.no-border-radius-top {
+  @include border-radius(0 0 3px 3px !important);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//font sizes
+
+.mid-size {
+  font-size: 13px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//vertical align
+
+.va-top {
+  vertical-align: top;
+}
+
+.va-baseline {
+  vertical-align: baseline;
+}
+
+.va-bottom {
+  vertical-align: bottom;
+}
+
+.va-inherit {
+  vertical-align: inherit;
+}
+
+.va-initial {
+  vertical-align: initial;
+}
+
+.va-middle {
+  vertical-align: middle;
+}
+
+.va-sub {
+  vertical-align: sub;
+}
+
+.va-super {
+  vertical-align: super;
+}
+
+.va-text-bottom {
+  vertical-align: text-bottom;
+}
+
+.va-text-top {
+  vertical-align: text-top;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//cursors
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//borders
+
+.no-border {
+  border: none !important;
+}
+
+.border-left {
+  border-left-width: 1px !important;
+}
+
+.border-right {
+  border-right-width: 1px !important;
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//box-shaodws
+
+.no-box-shadow {
+  @include box-shadow(none !important);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//border radius
+
+.radius-left {
+  @include border-radius(3px 0 0 3px !important);
+}
+
+.radius-top {
+  @include border-radius(3px 3px 0 0 !important);
+}
+
+.radius-right {
+  @include border-radius(0 3px 3px 0 !important);
+}
+
+.radius-bottom {
+  @include border-radius(0 0 3px 3px !important);
+}
+
+.radius-all {
+ @include border-radius(3px !important);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+// overflow
+
+.overflow-hidden {
+  overflow: hidden;
+}

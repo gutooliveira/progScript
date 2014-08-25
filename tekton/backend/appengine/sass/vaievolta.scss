@@ -3,5 +3,8 @@
 @import "compass/css3";
 
 @import "core/variables";
-@import "components/_grid";
-@import "components/_header";
+
+@import "components/css-properties";
+@import "components/grid";
+@import "components/header";
+@import "components/sidebar";

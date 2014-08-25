@@ -1,18 +1,55 @@
-header {
-  background-color: $black;
-}
-
 .vv-header {
-  background-image: image-url("header/header-bg.jpg");
+  background-image: image-url("header/header-picture-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-color: $black;
-  height: 154px;
+  height: 299px;
 }
 
 .vv-header-bar {
-  background-color: $green;
-  height: 25px;
-  opacity: 0.6;
+  background-image: image-url("header/bg-header.png");
   border-bottom: 1px solid darken($green, .5);
+  height: 50px;
+
+  .logo-header {
+    position: relative;
+    width: 113px;
+
+    &.active {
+      z-index: 1;
+    }
+  }
+
+  & > .vv-nav-header {
+    float: right;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .icon-reorder {
+    display: none;
+    color: #fff;
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+  }
+
+  @media screen and (max-width: 760px) {
+    text-align: center;
+
+    & > .vv-nav-header {
+      width: 65px;
+
+      .icon-reorder {
+        display: block;
+
+        &.active {
+          border-left: 1px solid $white;
+          border-right: 1px solid $white;
+          border-bottom: 1px solid $white;
+          z-index: 1;
+        }
+      }
+    }
+  }
 }
