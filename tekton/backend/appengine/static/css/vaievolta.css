@@ -63,6 +63,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 1, ../../sass/core/_resets.scss */
+body {
+  font-family: "Lucida Grande";
+  min-width: 579px;
+  overflow-x: auto;
+}
+
 /* line 5, ../../sass/core/_variables.scss */
 .red {
   background-color: red;
@@ -436,15 +443,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-shadow: -11px 0 45px #000;
     -webkit-box-shadow: -11px 0 45px #000;
     box-shadow: -11px 0 45px #000;
+    width: 260px;
+    height: 200%;
+    padding: 54px 2px 0;
     position: fixed;
     top: 0;
     right: 0;
-    width: 260px;
-    height: 200%;
+  }
+  /* line 18, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper.active .vv-sidebar > li {
+    text-align: left;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+  }
+  /* line 24, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper.active .vv-sidebar > li a {
+    color: #fff;
+    padding-left: 4px;
   }
 }
 
-/* line 21, ../../sass/components/_sidebar.scss */
+/* line 34, ../../sass/components/_sidebar.scss */
 .vv-sidebar-close {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
