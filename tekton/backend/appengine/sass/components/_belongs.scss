@@ -1,0 +1,32 @@
+.belongs-wrapper {
+  background-color: #fff;
+  @include clearfix;
+}
+
+.belong-item {
+  background-color: $dark-white;
+  padding: 4px;
+  display: table;
+  @include clearfix;
+}
+
+.belongs-item-picture {
+  width: 293px;
+  @include box-shadow(0 2px 3px $black);
+  @include border-radius(3px);
+  display: table-cell;
+}
+
+.belongs-item-info {
+  display: table-cell;
+  padding: 0 10px;
+}
+
+.belongs-item-name {
+  font-weight: bold;
+  @include ellipsis(100%);
+}
+
+.belongs-item-descripption {
+  color: $light-gray;
+}

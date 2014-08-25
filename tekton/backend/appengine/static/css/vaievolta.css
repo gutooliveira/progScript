@@ -70,27 +70,27 @@ body {
   overflow-x: auto;
 }
 
-/* line 5, ../../sass/core/_variables.scss */
+/* line 8, ../../sass/core/_variables.scss */
 .red {
   background-color: red;
 }
 
-/* line 9, ../../sass/core/_variables.scss */
+/* line 12, ../../sass/core/_variables.scss */
 .blue {
   background-color: blue;
 }
 
-/* line 13, ../../sass/core/_variables.scss */
+/* line 16, ../../sass/core/_variables.scss */
 .green {
   background-color: green;
 }
 
-/* line 17, ../../sass/core/_variables.scss */
+/* line 20, ../../sass/core/_variables.scss */
 .yellow {
   background-color: yellow;
 }
 
-/* line 21, ../../sass/core/_variables.scss */
+/* line 24, ../../sass/core/_variables.scss */
 .none {
   display: none;
 }
@@ -372,6 +372,92 @@ body {
   overflow: hidden;
 }
 
+/* line 1, ../../sass/components/_belongs.scss */
+.belongs-wrapper {
+  background-color: #fff;
+}
+/* line 2, ../../sass/core/_mixins.scss */
+.belongs-wrapper:before, .belongs-wrapper:after {
+  content: ' ';
+  display: table;
+}
+/* line 7, ../../sass/core/_mixins.scss */
+.belongs-wrapper:after {
+  clear: both;
+}
+
+/* line 6, ../../sass/components/_belongs.scss */
+.belong-item {
+  background-color: #F6F7F7;
+  padding: 4px;
+  display: table;
+}
+/* line 2, ../../sass/core/_mixins.scss */
+.belong-item:before, .belong-item:after {
+  content: ' ';
+  display: table;
+}
+/* line 7, ../../sass/core/_mixins.scss */
+.belong-item:after {
+  clear: both;
+}
+
+/* line 13, ../../sass/components/_belongs.scss */
+.belongs-item-picture {
+  width: 293px;
+  -moz-box-shadow: 0 2px 3px #000;
+  -webkit-box-shadow: 0 2px 3px #000;
+  box-shadow: 0 2px 3px #000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: table-cell;
+}
+
+/* line 20, ../../sass/components/_belongs.scss */
+.belongs-item-info {
+  display: table-cel;
+  padding: 0 10px;
+}
+
+/* line 25, ../../sass/components/_belongs.scss */
+.belongs-item-name {
+  font-weight: bold;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* line 30, ../../sass/components/_belongs.scss */
+.belongs-item-descripption {
+  color: #AFAFAF;
+}
+
+/* line 2, ../../sass/components/_container.scss */
+.menu-things-lended li {
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+/* line 8, ../../sass/components/_container.scss */
+.menu-things-lended li:first-child {
+  border-color: #44bc98;
+}
+/* line 11, ../../sass/components/_container.scss */
+.menu-things-lended li:first-child.active {
+  background-color: #44bc98;
+}
+/* line 16, ../../sass/components/_container.scss */
+.menu-things-lended li:last-child {
+  border-color: #E97D23;
+}
+/* line 19, ../../sass/components/_container.scss */
+.menu-things-lended li:last-child.active {
+  background-color: #E97D23;
+}
+
 /* line 1, ../../sass/components/_header.scss */
 .vv-header {
   background-image: url('../img/header/header-picture-bg.jpg?1348649170');
@@ -434,11 +520,7 @@ body {
 
 @media screen and (max-width: 760px) {
   /* line 4, ../../sass/components/_sidebar.scss */
-  .vv-sidebar-wrapper.active .vv-sidebar-close {
-    display: block;
-  }
-  /* line 8, ../../sass/components/_sidebar.scss */
-  .vv-sidebar-wrapper.active .vv-sidebar {
+  .vv-sidebar-wrapper .vv-sidebar {
     background-color: #000;
     -moz-box-shadow: -11px 0 45px #000;
     -webkit-box-shadow: -11px 0 45px #000;
@@ -448,23 +530,31 @@ body {
     padding: 54px 2px 0;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 100%;
   }
-  /* line 18, ../../sass/components/_sidebar.scss */
-  .vv-sidebar-wrapper.active .vv-sidebar > li {
+  /* line 14, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper .vv-sidebar > li {
     text-align: left;
     height: 60px;
     line-height: 60px;
     border-bottom: 1px solid #fff;
   }
-  /* line 24, ../../sass/components/_sidebar.scss */
-  .vv-sidebar-wrapper.active .vv-sidebar > li a {
+  /* line 20, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper .vv-sidebar > li a {
     color: #fff;
     padding-left: 4px;
   }
+  /* line 28, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper.active .vv-sidebar-close {
+    display: block;
+  }
+  /* line 32, ../../sass/components/_sidebar.scss */
+  .vv-sidebar-wrapper.active .vv-sidebar {
+    right: 0;
+  }
 }
 
-/* line 34, ../../sass/components/_sidebar.scss */
+/* line 39, ../../sass/components/_sidebar.scss */
 .vv-sidebar-close {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;

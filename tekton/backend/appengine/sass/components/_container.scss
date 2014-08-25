@@ -1,0 +1,24 @@
+.menu-things-lended {
+  li {
+    height: 50px;
+    line-height: 50px;
+    background-color: $white;
+    border: 1px solid transparent;
+
+    &:first-child {
+      border-color: $green;
+
+      &.active {
+        background-color: $green;
+      }
+    }
+
+    &:last-child {
+      border-color: $orange;
+
+      &.active {
+        background-color: $orange;
+      }
+    }
+  }
+}

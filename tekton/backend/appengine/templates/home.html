@@ -6,11 +6,27 @@
 {% endblock %}
 {% block body %}
         <div class="container red">
-            <nav>
-                <ul class="col-md-12">
-                    <li class="col-md-6"></li>
-                </ul>
-            </nav>
+            <ul class="col-md-12 menu-things-lended">
+                <li class="col-md-6 active">Emprestar</li>
+                <li class="col-md-6">Emprestados</li>
+            </ul>
+
+            <ul class="col-md-12 belongs-wrapper">
+                <li class="col-md-6">
+                    <div class="belong-item">
+                        <img src="/static/img/product/canon.jpg" class="belongs-item-picture"></img>
+                        <div class="belongs-item-info">
+                            <dl>
+                              <dt class="belongs-item-name">Câmera fotografica</dt>
+                                <dd class="belongs-item-description">CANON EOS 40D</dd>
+                            </dl>
+                            <a href="#">Ver detalhes</a>
+
+                            <button class="">Emprestar</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     <div class="container text-center none">
