@@ -1,11 +1,6 @@
 {% extends 'base/base.html' %}
-{% block css %}
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-social.css"/>
-    <link rel="stylesheet" href="/static/css/vaievolta.css"/>
-    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css"/>
-{% endblock %}
 {% block body %}
-        <div class="container" ng-controller="HomeCtrl">
+        <main class="container" ng-controller="HomeCtrl">
             <ul class="menu-things-lended">
                 <li class="col-xs-6" ng-class="{active: homeChoices}" ng-click="homeChoices = true">Emprestar</li>
                 <li class="col-xs-6" ng-class="{active: !homeChoices}" ng-click="homeChoices = false">Emprestados</li>
@@ -54,42 +49,5 @@
                     </div>
                 </li>
             </ul>
-        </div>
-
-    <div class="container text-center none">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Tekton</h1>
-                <p>{% trans %}A Full-Stack project for Google App Engine{% endtrans %}</p>
-            </div>
-        </div>
-        <br/>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="well">
-                    <h2>{% trans %}Create CRUD code on
-                        <a href="https://cloud.google.com/products/app-engine/">App Engine</a>{% endtrans %}
-                    </h2>
-                    <br/>
-
-                    <p>
-                        <a href="/courses" class="btn btn-primary"></i>{% trans %} Check Courses App
-                            Out{% endtrans %} &raquo;</a>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="well">
-                    <h2>{% trans %}Tekton is open source.{% endtrans %}</h2>
-                    <br/>
-
-                    <p>
-                        <a href="https://github.com/renzon/tekton-fullstack" class="btn btn-social btn-github"><i
-                                class="fa icon-github"></i>{% trans %}Check Git Hub Out{% endtrans %} &raquo;</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        </main>
 {% endblock %}

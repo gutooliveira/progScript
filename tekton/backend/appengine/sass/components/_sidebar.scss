@@ -18,6 +18,11 @@
           line-height: 60px;
           border-bottom: 1px solid #666;
           font-size: 17px;
+          @include opacity(0.3);
+
+          &.active {
+            @include opacity(1);
+          }
 
           a {
             color: $white;
