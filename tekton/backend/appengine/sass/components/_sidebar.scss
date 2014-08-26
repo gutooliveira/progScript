@@ -3,13 +3,12 @@
 
     .vv-sidebar {
         background-color: $black;
-        @include box-shadow(-11px 0 45px $black);
         width: 262px;
         height: 200%;
         padding: 54px 2px 0;
         position: fixed;
         top: 0;
-        right: -260px;
+        right: -264px;
         z-index: 2;
         @include transition(right 0.1s linear);
 
@@ -23,6 +22,7 @@
           a {
             color: $white;
             padding-left: 4px;
+            display: block;
           }
         }
       }
@@ -36,6 +36,7 @@
 
       .vv-sidebar {
         right: 0;
+        @include box-shadow(-11px 0 45px $black);
       }
     }
   }

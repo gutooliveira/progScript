@@ -66,7 +66,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 1, ../../sass/core/_resets.scss */
 body {
   font-family: "Lucida Grande";
-  min-width: 579px;
   overflow-x: auto;
 }
 
@@ -577,22 +576,19 @@ body {
   /* line 4, ../../sass/components/_sidebar.scss */
   .vv-sidebar-wrapper .vv-sidebar {
     background-color: #000;
-    -moz-box-shadow: -11px 0 45px #000;
-    -webkit-box-shadow: -11px 0 45px #000;
-    box-shadow: -11px 0 45px #000;
     width: 262px;
     height: 200%;
     padding: 54px 2px 0;
     position: fixed;
     top: 0;
-    right: -260px;
+    right: -264px;
     z-index: 2;
     -moz-transition: right 0.1s linear;
     -o-transition: right 0.1s linear;
     -webkit-transition: right 0.1s linear;
     transition: right 0.1s linear;
   }
-  /* line 16, ../../sass/components/_sidebar.scss */
+  /* line 15, ../../sass/components/_sidebar.scss */
   .vv-sidebar-wrapper .vv-sidebar > li {
     text-align: left;
     height: 60px;
@@ -600,10 +596,11 @@ body {
     border-bottom: 1px solid #666;
     font-size: 17px;
   }
-  /* line 23, ../../sass/components/_sidebar.scss */
+  /* line 22, ../../sass/components/_sidebar.scss */
   .vv-sidebar-wrapper .vv-sidebar > li a {
     color: #fff;
     padding-left: 4px;
+    display: block;
   }
   /* line 31, ../../sass/components/_sidebar.scss */
   .vv-sidebar-wrapper.active .vv-sidebar-close {
@@ -618,10 +615,13 @@ body {
   /* line 37, ../../sass/components/_sidebar.scss */
   .vv-sidebar-wrapper.active .vv-sidebar {
     right: 0;
+    -moz-box-shadow: -11px 0 45px #000;
+    -webkit-box-shadow: -11px 0 45px #000;
+    box-shadow: -11px 0 45px #000;
   }
 }
 
-/* line 44, ../../sass/components/_sidebar.scss */
+/* line 45, ../../sass/components/_sidebar.scss */
 .vv-sidebar-close {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
