@@ -38,22 +38,166 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
     <script>
+        window.app = angular.module('MyApp', []);
+        app.config(function($interpolateProvider){
+            $interpolateProvider.startSymbol('{[{');
+            $interpolateProvider.endSymbol('}]}');
+        });
+
         app.controller("MyCtrl", function($scope){
             $scope.showMenu = false;
+            $scope.teste = function(){
+                $scope.showMenu = !$scope.showMenu;
+            }
+        });
+
+        app.controller("HomeCtrl", function($scope){
+            $scope.homeChoices = true;
+
+            $scope.pertences = [
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D'
+                }
+
+            ];
+
+            $scope.pertencesEmprestados = [
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                },
+                {
+                    imagem: '/static/img/product/canon.jpg',
+                    nome: 'Câmera fotografica',
+                    desc: 'CANON EOS 40D',
+                    amigo: 'Loren Impsun',
+                    amigoFoto: '/static/img/profile/exemplo-profile.png'
+                }
+
+            ]
         })
     </script>
+
     {% block css %}{% endblock %}
     {% block js %}{% endblock %}
 </head>
-<body>
+<body ng-app="MyApp">
     <header class="vv-header">
         <div class="vv-header-bar col-md-12 position-static" ng-controller="MyCtrl">
             <img class="logo-header" ng-class="{active: showMenu}" src="/static/img/logo-header.png">
             <nav class="vv-nav-header">
-                <span class="icon-reorder" ng-class="{active: showMenu}" ng-click="showMenu = true"></span>
+                <span class="icon-reorder" ng-class="{'active': showMenu}" ng-click="teste()"></span>
             </nav>
-            <div class="vv-sidebar-wrapper" ng-class="{active: showMenu}">
-                <div class="vv-sidebar-close"></div>
+            <div class="vv-sidebar-wrapper" ng-class="{'active': showMenu}" >
+                <div class="vv-sidebar-close" ng-click="teste()"></div>
                 <ul class="vv-sidebar">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Emprestar</a></li>

@@ -16,7 +16,7 @@
     width: 113px;
 
     &.active {
-      z-index: 1;
+      z-index: 3;
     }
   }
 
@@ -32,6 +32,10 @@
     font-size: 46px;
     text-align: center;
     position: relative;
+    border-left: 3px solid $green;
+    border-right: 3px solid $green;
+    border-bottom: 3px solid $green;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 760px) {
@@ -44,10 +48,10 @@
         display: block;
 
         &.active {
-          border-left: 1px solid $white;
-          border-right: 1px solid $white;
-          border-bottom: 1px solid $white;
-          z-index: 1;
+          border-left-color: $white;
+          border-right-color: $white;
+          border-bottom-color: $white;
+          z-index: 3;
         }
       }
     }

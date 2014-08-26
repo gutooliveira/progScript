@@ -5,25 +5,52 @@
     <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css"/>
 {% endblock %}
 {% block body %}
-        <div class="container red">
-            <ul class="col-md-12 menu-things-lended">
-                <li class="col-md-6 active">Emprestar</li>
-                <li class="col-md-6">Emprestados</li>
+        <div class="container red" ng-controller="HomeCtrl">
+            <ul class="menu-things-lended">
+                <li class="col-xs-6" ng-class="{active: homeChoices}" ng-click="homeChoices = true">Emprestar</li>
+                <li class="col-xs-6" ng-class="{active: !homeChoices}" ng-click="homeChoices = false">Emprestados</li>
             </ul>
 
-            <ul class="col-md-12 belongs-wrapper">
-                <li class="col-md-6">
+            <ul class="col-md-12 belongs-wrapper" ng-show="homeChoices">
+                <li class="col-md-6" ng-repeat="pertence in pertences">
                     <div class="belong-item">
-                        <img src="/static/img/product/canon.jpg" class="belongs-item-picture"></img>
-                        <div class="belongs-item-info">
+                        <div class="belong-item-borred" ng-show="!homeChoices"></div>
+                        <img src="{[{pertence.imagem}]}" class="belongs-item-picture col-xs-6 col-sm-4"></img>
+                        <div class="belongs-item-info col-xs-6 col-sm-4">
                             <dl>
-                              <dt class="belongs-item-name">Câmera fotografica</dt>
-                                <dd class="belongs-item-description">CANON EOS 40D</dd>
+                                <dt class="belongs-item-name">{[{pertence.nome}]}</dt>
+                                <dd class="belongs-item-description">{[{pertence.desc}]}</dd>
                             </dl>
                             <a href="#">Ver detalhes</a>
 
                             <button class="">Emprestar</button>
                         </div>
+                    </div>
+                    <div class="belongs-borrowed col-md-12" ng-hide="homeChoices">
+                        <div class="belongs-borrowed-label col-xs-9">Nome de teste</div>
+                        <img class="friends-belongs-card col-xs-3" src="{[{pertence.imagem}]}">
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="col-md-12 belongs-wrapper" ng-hide="homeChoices">
+                <li class="col-md-6" ng-repeat="pertenceEmprestado in pertencesEmprestados" ng-class="{'belongs-borrowed-wrapper': !homeChoices}">
+                    <div class="belong-item">
+                        <div class="belong-item-borred" ng-show="!homeChoices"></div>
+                        <img src="{[{pertenceEmprestado.imagem}]}" class="belongs-item-picture col-xs-6 col-sm-4"></img>
+                        <div class="belongs-item-info col-xs-6 col-sm-4">
+                            <dl>
+                                <dt class="belongs-item-name">{[{pertenceEmprestado.nome}]}</dt>
+                                <dd class="belongs-item-description">{[{pertenceEmprestado.desc}]}</dd>
+                            </dl>
+                            <a href="#">Ver detalhes</a>
+
+                            <button class="">Emprestar</button>
+                        </div>
+                    </div>
+                    <div class="belongs-borrowed col-xs-12" ng-show="!homeChoices">
+                        <div class="belongs-borrowed-label col-xs-9">{[{pertenceEmprestado.amigo}]}</div>
+                        <img class="friends-belongs-card col-xs-3 pull-right" src="{[{pertenceEmprestado.amigoFoto}]}">
                     </div>
                 </li>
             </ul>
