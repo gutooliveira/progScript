@@ -196,12 +196,16 @@
             <div class="vv-sidebar-wrapper" ng-class="{'active': showMenu}" >
                 <div class="vv-sidebar-close" ng-click="teste()"></div>
                 <ul class="vv-sidebar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Emprestar</a></li>
-                    <li class="active"><a href="#">Emprestados</a></li>
-                    <li><a href="#">Meus pertences</a></li>
-                    <li><a href="#">Quero emprestado</a></li>
-                    <li><a href="#">Amigos</a></li>
+                    {% macro select_tab(tab='' %}
+                        <li {{ 'class=active' if tab=='HOME' }}><a href="/">Home</a></li>
+                        <li {{ 'class=active' if tab=='EMPRESTAR' }}><a href="/emprestar_app">Emprestar</a></li>
+                        <li {{ 'class=active' if tab=='EMPRESTADOS' }}><a href="/">Emprestados</a></li>
+                        <li {{ 'class=active' if tab=='MEUS' }}><a href="/">Meus pertences</a></li>
+                        <li {{ 'class=active' if tab=='QUERO' }}><a href="/">Quero emprestado</a></li>
+                        <li {{ 'class=active' if tab=='AMIGOS' }}><a href="/">Amigos</a></li>
+                    {% endmacro %}
+                    {% block tabs %}
+                    {% endblock %}
                 </ul>
             </div>
         </div>
