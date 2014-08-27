@@ -599,7 +599,7 @@ body {
     opacity: 0.3;
   }
   /* line 23, ../../sass/components/_sidebar.scss */
-  .vv-sidebar-wrapper .vv-sidebar > li.active {
+  .vv-sidebar-wrapper .vv-sidebar > li:hover, .vv-sidebar-wrapper .vv-sidebar > li.active {
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }

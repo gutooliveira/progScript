@@ -1,5 +1,23 @@
-{% extends 'rota/base.html' %}
+{% extends 'base/base.html' %}
 
 {% block body %}
-    <h1>{{ name }} - {{ lastname }}</h1>
+    <ul class="col-md-12 belongs-wrapper">
+    {% for p in pertences %}
+        <li class="col-md-6">
+            <div class="belong-item">
+                <img src="{{p.imagem}}" class="belongs-item-picture col-xs-6 col-sm-4"></img>
+                <div class="belongs-item-info col-xs-6 col-sm-4">
+                    <dl>
+                        <dt class="belongs-item-name">{{p.nome}}</dt>
+                        <dd class="belongs-item-description">{{p.desc}}</dd>
+                    </dl>
+                    <a href="#">Ver detalhes</a>
+
+                    <button class="">Emprestar</button>
+                </div>
+            </div>
+
+        </li>
+    {% endfor %}
+    </ul>
 {% endblock %}
