@@ -1,0 +1,45 @@
+{% extends 'queros/base.html' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{% trans %}This is a generic home for quero_app {% endtrans %}  </h1>
+                <a href="{{ new_path }}" class="btn btn-success">{% trans %}Create New Quero{% endtrans %}</a>
+                <hr/>
+                <h2>{% trans %}List of Queros{% endtrans %}</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th/>
+                        <th>{% trans %}Id{% endtrans %}</th>
+                        <th>{% trans %}Creation{% endtrans %}</th>
+                        <th>{% trans %}Item{% endtrans %}</th>
+                        <th>{% trans %}Descricao{% endtrans %}</th>
+                        <th>{% trans %}Nome{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for quero in queros %}
+                        <tr>
+                            <td><a href="{{ quero.edit_path }}" class="btn btn-success btn-sm"><i
+                                    class="glyphicon glyphicon-pencil"></i></a></td>
+                            <td>{{ quero.id }}</td>
+                            <td>{{ quero.creation }}</td>
+                            <td>{{ quero.item }}</td>
+                            <td>{{ quero.descricao }}</td>
+                            <td>{{ quero.nome }}</td>
+                            <td>
+                                <form action="{{ quero.delete_path }}" method="post" onsubmit="return confirm('{{_('Are you sure to delete? Press cancel to avoid deletion.')}}');">
+                                    {{ csrf_input() }}
+                                    <button class="btn btn-danger btn-sm"><i
+                                            class="glyphicon glyphicon-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
