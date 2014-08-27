@@ -196,6 +196,21 @@
             <div class="vv-sidebar-wrapper" ng-class="{'active': showMenu}" >
                 <div class="vv-sidebar-close" ng-click="teste()"></div>
                 <ul class="vv-sidebar">
+                    {% macro select_tab(tab='') %}
+                        <li {{ 'class=active' if tab=='EMPRESTARS' }}>
+                            <a href="/emprestars">Emprestar</a>
+                        </li>
+                        <li {{ 'class=active' if tab=='QUEROS' }}>
+                            <a href="/queros">Quero Emprestado</a>
+                        </li>
+                    {% endmacro %}
+                    {% block tabs %}
+                        {{ select_tab() }}
+                    {% endblock %}
+                </ul>
+
+            <!--
+                <ul class="vv-sidebar">
                     <li><a href="/">Home</a></li>
                     <li><a href="/emprestar_app">Emprestar</a></li>
                     <li><a href="/">Emprestados</a></li>
@@ -203,6 +218,9 @@
                     <li><a href="/">Quero emprestado</a></li>
                     <li><a href="/">Amigos</a></li>
                 </ul>
+            -->
+
+
             </div>
         </div>
     </header>
