@@ -6,20 +6,19 @@
                 <li class="col-xs-6" ng-class="{active: !homeChoices}" ng-click="homeChoices = false">Emprestados</li>
             </ul>
 
-            <ul class="col-md-12 belongs-wrapper" ng-show="homeChoices">
+            <ul class="row belongs-wrapper" ng-show="homeChoices">
                 <li class="col-md-6" ng-repeat="pertence in pertences">
-                    <div class="belong-item">
+                    <div class="belong-item row">
                         <div class="belong-item-borred" ng-show="!homeChoices"></div>
-                        <img src="{[{pertence.imagem}]}" class="belongs-item-picture col-xs-6 col-sm-4"></img>
-                        <div class="belongs-item-info col-xs-6 col-sm-4">
+                        <img src="{[{pertence.imagem}]}" class="belongs-item-picture col-xs-6"></img>
+                        <div class="belongs-item-info col-xs-6">
                             <dl>
                                 <dt class="belongs-item-name">{[{pertence.nome}]}</dt>
                                 <dd class="belongs-item-description">{[{pertence.desc}]}</dd>
                             </dl>
                             <a href="#">Ver detalhes</a>
-
-                            <button class="">Emprestar</button>
                         </div>
+                        <button class="btn btn-emprestar col-xs-6">Emprestar</button>
                     </div>
                     <div class="belongs-borrowed col-md-12" ng-hide="homeChoices">
                         <div class="belongs-borrowed-label col-xs-9">Nome de teste</div>
@@ -28,7 +27,7 @@
                 </li>
             </ul>
 
-            <ul class="col-md-12 belongs-wrapper" ng-hide="homeChoices">
+            <ul class="row belongs-wrapper" ng-hide="homeChoices">
                 <li class="col-md-6" ng-repeat="pertenceEmprestado in pertencesEmprestados" ng-class="{'belongs-borrowed-wrapper': !homeChoices}">
                     <div class="belong-item">
                         <div class="belong-item-borred" ng-show="!homeChoices"></div>

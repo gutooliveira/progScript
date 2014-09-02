@@ -61,6 +61,6 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-.sass-cache
+/.sass-cache
 
-tekton/backend/appengine/static/css/vaievolta.css
+/tekton/backend/appengine/static/css/vaievolta.css

@@ -24,12 +24,14 @@
 }
 
 .belongs-item-name {
+  margin: 8% 0 3%;
   font-weight: bold;
   @include ellipsis(100%);
 }
 
-.belongs-item-descripption {
+.belongs-item-description {
   color: $light-gray;
+  @include ellipsis(100%);
 }
 
 .belong-item-borred {

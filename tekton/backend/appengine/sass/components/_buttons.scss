@@ -1,0 +1,15 @@
+.btn {
+  background-color: $white;
+  @include border-radius(0);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.btn-emprestar {
+  color: $green;
+  border-color: $green;
+
+  &:hover, &:active, &:focus {
+    color: darken($green, .8);
+  }
+}

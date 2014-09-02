@@ -69,27 +69,27 @@ body {
   overflow-x: auto;
 }
 
-/* line 8, ../../sass/core/_variables.scss */
+/* line 9, ../../sass/core/_variables.scss */
 .red {
   background-color: red;
 }
 
-/* line 12, ../../sass/core/_variables.scss */
+/* line 13, ../../sass/core/_variables.scss */
 .blue {
   background-color: blue;
 }
 
-/* line 16, ../../sass/core/_variables.scss */
+/* line 17, ../../sass/core/_variables.scss */
 .green {
   background-color: green;
 }
 
-/* line 20, ../../sass/core/_variables.scss */
+/* line 21, ../../sass/core/_variables.scss */
 .yellow {
   background-color: yellow;
 }
 
-/* line 24, ../../sass/core/_variables.scss */
+/* line 25, ../../sass/core/_variables.scss */
 .none {
   display: none;
 }
@@ -419,6 +419,7 @@ body {
 
 /* line 26, ../../sass/components/_belongs.scss */
 .belongs-item-name {
+  margin: 8% 0 3%;
   font-weight: bold;
   width: 100%;
   text-overflow: ellipsis;
@@ -426,12 +427,16 @@ body {
   white-space: nowrap;
 }
 
-/* line 31, ../../sass/components/_belongs.scss */
-.belongs-item-descripption {
+/* line 32, ../../sass/components/_belongs.scss */
+.belongs-item-description {
   color: #AFAFAF;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-/* line 35, ../../sass/components/_belongs.scss */
+/* line 37, ../../sass/components/_belongs.scss */
 .belong-item-borred {
   background-color: #000;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -444,13 +449,13 @@ body {
   z-index: 1;
 }
 
-/* line 46, ../../sass/components/_belongs.scss */
+/* line 48, ../../sass/components/_belongs.scss */
 .belongs-borrowed {
   position: absolute;
   bottom: 0;
   z-index: 1;
 }
-/* line 51, ../../sass/components/_belongs.scss */
+/* line 53, ../../sass/components/_belongs.scss */
 .belongs-borrowed .belongs-borrowed-label {
   background-color: #fff;
   line-height: 40px;
@@ -458,9 +463,29 @@ body {
   position: absolute;
   bottom: 0;
 }
-/* line 58, ../../sass/components/_belongs.scss */
+/* line 60, ../../sass/components/_belongs.scss */
 .belongs-borrowed .friends-belongs-card {
   background-color: #fff;
+}
+
+/* line 1, ../../sass/components/_buttons.scss */
+.btn {
+  background-color: #fff;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 8, ../../sass/components/_buttons.scss */
+.btn-emprestar {
+  color: #44bc98;
+  border-color: #44bc98;
+}
+/* line 12, ../../sass/components/_buttons.scss */
+.btn-emprestar:hover, .btn-emprestar:active, .btn-emprestar:focus {
+  color: #42b996;
 }
 
 /* line 2, ../../sass/core/_mixins.scss */
