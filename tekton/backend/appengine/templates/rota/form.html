@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% block body %}
-    <form action="{{ save.path }}" mothod="POST">
+    <form action="{{ save}}" mothod="POST">
         {{ csrf_input() }}
         {{ form_input('Nome','nome','Guto') }}
         <button type="submit">Salvar</button>

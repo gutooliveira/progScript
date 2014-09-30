@@ -470,7 +470,6 @@ body {
 
 /* line 1, ../../sass/components/_buttons.scss */
 .btn {
-  background-color: #fff;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -478,12 +477,12 @@ body {
   padding-right: 8px;
 }
 
-/* line 8, ../../sass/components/_buttons.scss */
+/* line 7, ../../sass/components/_buttons.scss */
 .btn-emprestar {
   color: #44bc98;
   border-color: #44bc98;
 }
-/* line 12, ../../sass/components/_buttons.scss */
+/* line 11, ../../sass/components/_buttons.scss */
 .btn-emprestar:hover, .btn-emprestar:active, .btn-emprestar:focus {
   color: #42b996;
 }
@@ -538,32 +537,33 @@ body {
   background-image: url('../img/header/header-picture-bg.jpg?1348649170');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: #000;
   height: 299px;
 }
 
-/* line 9, ../../sass/components/_header.scss */
+/* line 10, ../../sass/components/_header.scss */
 .vv-header-bar {
   background-image: url('../img/header/bg-header.png?1408923372');
   border-bottom: 1px solid #43bb97;
   height: 50px;
 }
-/* line 14, ../../sass/components/_header.scss */
+/* line 15, ../../sass/components/_header.scss */
 .vv-header-bar .logo-header {
   position: relative;
   width: 113px;
 }
-/* line 18, ../../sass/components/_header.scss */
+/* line 19, ../../sass/components/_header.scss */
 .vv-header-bar .logo-header.active {
   z-index: 3;
 }
-/* line 23, ../../sass/components/_header.scss */
+/* line 24, ../../sass/components/_header.scss */
 .vv-header-bar > .vv-nav-header {
   float: right;
   height: 50px;
   line-height: 50px;
 }
-/* line 29, ../../sass/components/_header.scss */
+/* line 30, ../../sass/components/_header.scss */
 .vv-header-bar .icon-reorder {
   display: none;
   color: #fff;
@@ -576,19 +576,19 @@ body {
   cursor: pointer;
 }
 @media screen and (max-width: 760px) {
-  /* line 9, ../../sass/components/_header.scss */
+  /* line 10, ../../sass/components/_header.scss */
   .vv-header-bar {
     text-align: center;
   }
-  /* line 44, ../../sass/components/_header.scss */
+  /* line 45, ../../sass/components/_header.scss */
   .vv-header-bar > .vv-nav-header {
     width: 65px;
   }
-  /* line 47, ../../sass/components/_header.scss */
+  /* line 48, ../../sass/components/_header.scss */
   .vv-header-bar > .vv-nav-header .icon-reorder {
     display: block;
   }
-  /* line 50, ../../sass/components/_header.scss */
+  /* line 51, ../../sass/components/_header.scss */
   .vv-header-bar > .vv-nav-header .icon-reorder.active {
     border-left-color: #fff;
     border-right-color: #fff;
