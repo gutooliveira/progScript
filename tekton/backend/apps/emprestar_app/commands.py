@@ -2,8 +2,9 @@
 from __future__ import absolute_import, unicode_literals
 from gaebusiness.gaeutil import SaveCommand, ModelSearchCommand
 from gaeforms.ndb.form import ModelForm
-from gaegraph.business_base import UpdateNode
-from emprestar_app.model import Emprestar
+from gaegraph.business_base import UpdateNode, CreateArc, DeleteArcs
+from emprestar_app.model import Emprestar, ArcoLogado
+
 
 class EmprestarPublicForm(ModelForm):
     """
@@ -63,3 +64,12 @@ class ListEmprestarCommand(ModelSearchCommand):
     def __init__(self):
         super(ListEmprestarCommand, self).__init__(Emprestar.query_by_creation())
 
+
+class SalvarPertence(CreateArc):
+    def __init__(self, user, **pertences):
+        salva_cmd=SaveEmprestarCommand(**pertences)
+        super(SalvarPertence, self).__init__(ArcoLogado, user, salva_cmd)
+
+class DeletarPertence(DeleteArcs):
+    def __init__(self, user):
+        super(DeletarPertence, self).__init__(ArcoLogado, destination=user)

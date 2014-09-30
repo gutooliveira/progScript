@@ -13,13 +13,14 @@ def index():
     return TemplateResponse({'save_path': router.to_path(save)},'emprestars/admin/form.html')
 
 
-def save(_handler, emprestar_id=None, **emprestar_properties):
-    cmd = facade.save_emprestar_cmd(**emprestar_properties)
+def save(_handler,_logged_user, emprestar_id=None,**emprestar_properties):
+    #cmd = facade.save_emprestar_cmd(**emprestar_properties)
+    cmd_user=facade.SalvarPertence(_logged_user,**emprestar_properties)
     try:
-        cmd()
+        cmd_user()
     except CommandExecutionException:
-        context = {'errors': cmd.errors,
-                   'emprestar': cmd.form}
+        context = {'errors': cmd_user.errors,
+                   'emprestar': cmd_user.form}
 
         return TemplateResponse(context, 'emprestars/admin/form.html')
     _handler.redirect(router.to_path(admin))

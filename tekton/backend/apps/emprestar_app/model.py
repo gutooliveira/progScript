@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from google.appengine.ext import ndb
-from gaegraph.model import Node
+from gaegraph.model import Node, Arc
 from gaeforms.ndb import property
 
 
@@ -11,3 +11,5 @@ class Emprestar(Node):
     descricao = ndb.StringProperty(required=True)
     emprestar = ndb.DateProperty(required=True)
 
+class ArcoLogado(Arc):
+    destination = ndb.KeyProperty(Emprestar,required=True)

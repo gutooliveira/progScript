@@ -2,7 +2,7 @@
 from __future__ import absolute_import, unicode_literals
 from gaegraph.business_base import NodeSearch, DeleteNode
 from emprestar_app.commands import ListEmprestarCommand, SaveEmprestarCommand, UpdateEmprestarCommand, \
-    EmprestarPublicForm, EmprestarDetailForm, EmprestarShortForm
+    EmprestarPublicForm, EmprestarDetailForm, EmprestarShortForm, SalvarPertence, DeletarPertence
 
 
 def save_emprestar_cmd(**emprestar_properties):
@@ -74,3 +74,9 @@ def delete_emprestar_cmd(emprestar_id):
     """
     return DeleteNode(emprestar_id)
 
+def salvar_emprestimo(user, **pertences):
+
+    return SalvarPertence(user, **pertences)
+
+def delete_arco(user):
+    return DeletarPertence(user)
