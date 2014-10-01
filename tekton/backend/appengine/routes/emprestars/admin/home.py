@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 from config.template_middleware import TemplateResponse
+from emprestar_app.model import ArcoLogado
+from gaegraph.business_base import DestinationsSearch
 from tekton import router
 from gaecookie.decorator import no_csrf
 from emprestar_app import facade
@@ -13,12 +15,14 @@ def delete(_handler, emprestar_id):
 
 
 @no_csrf
-def index():
-    cmd = facade.list_emprestars_cmd()
-    emprestars = cmd()
+def index(_logged_user):
+    #cmd = facade.list_emprestars_cmd()
+    #emprestars = cmd()
     edit_path = router.to_path(edit)
     delete_path = router.to_path(delete)
     short_form = facade.emprestar_short_form()
+
+    emprestars = DestinationsSearch(arc_class=ArcoLogado, origin=_logged_user)()
 
     def short_emprestar_dict(emprestar):
         emprestar_dct = short_form.fill_with_model(emprestar)

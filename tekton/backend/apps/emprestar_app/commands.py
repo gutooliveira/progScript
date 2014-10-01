@@ -67,8 +67,9 @@ class ListEmprestarCommand(ModelSearchCommand):
 
 class SalvarPertence(CreateArc):
     def __init__(self, user, **pertences):
-        salva_cmd=SaveEmprestarCommand(**pertences)
-        super(SalvarPertence, self).__init__(ArcoLogado, user, salva_cmd)
+        salva_cmd = SaveEmprestarCommand(**pertences)
+        pertence = salva_cmd()
+        super(SalvarPertence, self).__init__(ArcoLogado, user, pertence)
 
 class DeletarPertence(DeleteArcs):
     def __init__(self, user):

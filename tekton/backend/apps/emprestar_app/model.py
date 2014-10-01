@@ -11,5 +11,7 @@ class Emprestar(Node):
     descricao = ndb.StringProperty(required=True)
     emprestar = ndb.DateProperty(required=True)
 
+
 class ArcoLogado(Arc):
-    destination = ndb.KeyProperty(Emprestar,required=True)
+    destination = ndb.KeyProperty(Emprestar, required=True)
+

@@ -5,8 +5,7 @@ from gaegraph.model import Node
 from gaeforms.ndb import property
 
 
-class Quero(Node):
-    item = ndb.StringProperty(required=True)
+class Amigo(Node):
     nome = ndb.StringProperty(required=True)
-    descricao = ndb.StringProperty(required=True)
+    email = ndb.StringProperty(required=True)
 
