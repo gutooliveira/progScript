@@ -3,7 +3,7 @@ from __future__ import absolute_import, unicode_literals
 from config.template_middleware import TemplateResponse
 from emprestar_app.model import ArcoLogado
 from gaebusiness.business import CommandExecutionException
-from gaegraph.business_base import CreateArc
+from gaegraph.business_base import CreateArc, DeleteArcs
 from gaepermission.decorator import login_required
 from tekton import router
 from gaecookie.decorator import no_csrf
@@ -19,13 +19,15 @@ def index():
 
 def save(_handler, _logged_user, emprestar_id=None,**emprestar_properties):
     cmd = facade.save_emprestar_cmd(**emprestar_properties)
-    #cmd_user = facade.SalvarPertence(_logged_user, **emprestar_properties)
 
     # criar arco
     try:
-        #cmd_user()
         pertence = cmd()
+        #Quando se adiciona o item de emprestimo, a gente cria o arco desse pertence com o usuário logado
+        #Esse arco é recuperado no home.py
         CreateArc(arc_class=ArcoLogado, origin=_logged_user, destination=pertence)()
+        cmd = DeleteArcs(arc_class=ArcoLogado, origin=_logged_user, destination=pertence)
+        funcao(cmd)
     except CommandExecutionException:
         context = {'errors': cmd.errors,
                    'emprestar': cmd.form}
