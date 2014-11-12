@@ -22,6 +22,7 @@
             <input id="nomeInput" type="text" class="form-control" ng-model="nome">
         </div>
 
-        <button class="btn btn-success" ng-click="salvar()">Save</button>
+        <button class="btn btn-success" ng-click="salvar()" ng-show="!salvando">Save</button>
+        <button class="btn btn-success" ng-show="salvando">Salvando</button>
     </form>
 </div>

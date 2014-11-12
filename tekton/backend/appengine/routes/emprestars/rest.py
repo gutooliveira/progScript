@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
+from emprestar_app.model import ArcoLogado
 from gaebusiness.business import CommandExecutionException
+from gaegraph.business_base import CreateArc
 from tekton.gae.middleware.json_middleware import JsonResponse
 from emprestar_app import facade
 
@@ -13,8 +15,10 @@ def index():
     return JsonResponse(emprestar_short)
 
 
-def save(**emprestar_properties):
+def save(_logged_user, **emprestar_properties):
     cmd = facade.save_emprestar_cmd(**emprestar_properties)
+    pertence = cmd()
+    CreateArc(arc_class=ArcoLogado, origin=_logged_user, destination=pertence)()
     return _save_or_update_json_response(cmd)
 
 

@@ -13,12 +13,20 @@ app.directive("emprestarform", function($http){
        templateUrl: "/static/emprestar/html/form.html",
        scope:{
          toggleshow: "&",
+         elementos: "="
        },
-       link: function(scope, elm, attrs){
+       link: function($scope, elm, attrs){
 
-           scope.salvar = function() {
-               var data = {pertence: scope.pertence, nome: scope.nome, descricao: scope.descricao, emprestar: scope.emprestar};
-               $http.post("/emprestars/rest/save", data);
+           $scope.salvando = false;
+           $scope.salvar = function() {
+               $scope.salvando = true;
+               var data = {pertence: $scope.pertence, nome: $scope.nome, descricao: $scope.descricao, emprestar: $scope.emprestar};
+               $http.post("/emprestars/rest/save", data).success( function(result){
+                    $scope.elementos.push(result)
+               }).finally(function(){
+                   $scope.salvando = false;
+               });
+
            };
        }
    };

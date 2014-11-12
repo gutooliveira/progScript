@@ -2,15 +2,17 @@
 from __future__ import absolute_import, unicode_literals
 from config.template_middleware import TemplateResponse
 from emprestar_app.model import ArcoLogado
-from gaegraph.business_base import DestinationsSearch
+from gaegraph.business_base import DestinationsSearch, DeleteArcs
 from tekton import router
 from gaecookie.decorator import no_csrf
 from emprestar_app import facade
 from routes.emprestars.admin import new, edit
 import json
 
-def delete(_handler, emprestar_id):
+
+def delete(_handler, _logged_user, emprestar_id):
     facade.delete_emprestar_cmd(emprestar_id)()
+    DeleteArcs(arc_class=ArcoLogado, origin=_logged_user, destination=emprestar_id)()
     _handler.redirect(router.to_path(index))
 
 

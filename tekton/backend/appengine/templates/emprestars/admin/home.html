@@ -11,9 +11,9 @@
             <div class="col-md-12">
                 <h1>{% trans %}This is a generic home for emprestar_app {% endtrans %}  </h1>
                 <!-- <a href="{{ new_path }}" class="btn btn-success">{% trans %}Create New Emprestar{% endtrans %}</a> -->
-                <button class="btn btn-success" ng-show="mostrarForm" ng-click="toggleShow()">Cadastrar item para ser emprestado</button>
-                <button class="btn btn-success" ng-hide="mostrarForm" ng-click="toggleShow()">Cancelar cadastro de item para ser emprestado</button>
-                <emprestarform  toggleShow="toggleShow" ng-show="mostrarForm"></emprestarform>
+                <button class="btn btn-success" ng-hide="mostrarForm" ng-click="toggleShow()">Cadastrar item para ser emprestado</button>
+                <button class="btn btn-success" ng-show="mostrarForm" ng-click="toggleShow()">Cancelar cadastro de item para ser emprestado</button>
+                <emprestarform  elementos="emprestars" toggleShow="toggleShow" ng-show="mostrarForm"></emprestarform>
                 <hr/>
                 <h2>{% trans %}List of Emprestars{% endtrans %}</h2>
                 <table class="table table-striped table-hover">
