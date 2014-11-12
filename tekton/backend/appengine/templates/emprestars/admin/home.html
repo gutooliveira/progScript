@@ -39,7 +39,8 @@
                             <td>{[{ emprestar.descricao }]}</td>
                             <td>{[{ emprestar.nome }]}</td>
                             <td>
-                                    <button class="btn btn-danger btn-sm" ng-click="deletar(emprestar.id)" ng-disabled="deletando">
+                                    <button class="btn btn-danger btn-sm" ng-click="deletar(emprestar)"
+                                            ng-disabled="emprestar.deletando">
                                         <i class="glyphicon glyphicon-trash"></i>
                                     </button>
                             </td>

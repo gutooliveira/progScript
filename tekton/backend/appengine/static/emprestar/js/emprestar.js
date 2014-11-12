@@ -38,9 +38,9 @@ app.controller("EmprestarCtrl", function($scope, emprestarApi){
         $scope.mostrarForm = !$scope.mostrarForm;
     };
 
-    $scope.deletar = function(pertence_id){
-       $scope.deletando = true;
-       emprestarApi.deletar_pertence(pertence_id).success( function(result){
+    $scope.deletar = function(pertence){
+       pertence.deletando = true;
+       emprestarApi.deletar_pertence(pertence.id).success( function(result){
            for(var i = 0; i < $scope.emprestars.length; ++i){
                 if(result.id == $scope.emprestars[i].id){
                     $scope.emprestars.splice(i, 1);
