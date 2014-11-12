@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
-from emprestar_app.model import ArcoLogado
+from emprestar_app.model import ArcoLogado, Emprestar
 from gaebusiness.business import CommandExecutionException
-from gaegraph.business_base import CreateArc
+from gaegraph.business_base import CreateArc, DeleteArcs
 from tekton.gae.middleware.json_middleware import JsonResponse
 from emprestar_app import facade
 
@@ -27,8 +27,11 @@ def update(emprestar_id, **emprestar_properties):
     return _save_or_update_json_response(cmd)
 
 
-def delete(emprestar_id):
+def delete(_logged_user, emprestar_id):
+    pertence = Emprestar.get_by_id(emprestar_id)
+    DeleteArcs(arc_class=ArcoLogado, origin=_logged_user, destination=pertence)()
     facade.delete_emprestar_cmd(emprestar_id)()
+    return JsonResponse({'id': emprestar_id})
 
 
 def _save_or_update_json_response(cmd):
