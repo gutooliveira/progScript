@@ -468,6 +468,49 @@ body {
   background-color: #fff;
 }
 
+/* line 65, ../../sass/components/_belongs.scss */
+.belong-options {
+  width: 15%;
+  height: 25%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* line 71, ../../sass/components/_belongs.scss */
+.belong-options .beleong-options-toggle {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+/* line 78, ../../sass/components/_belongs.scss */
+.belong-options .belong-options-buttons {
+  width: 125%;
+  position: absolute;
+  right: 84%;
+  top: 0;
+  height: 100%;
+}
+/* line 85, ../../sass/components/_belongs.scss */
+.belong-options .belong-options-buttons li {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+/* line 90, ../../sass/components/_belongs.scss */
+.belong-options .belong-options-buttons li button, .belong-options .belong-options-buttons li a {
+  width: 92%;
+  height: 100%;
+  position: relative;
+}
+/* line 96, ../../sass/components/_belongs.scss */
+.belong-options .belong-options-buttons li .glyphicon-pencil {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+}
+
 /* line 1, ../../sass/components/_buttons.scss */
 .btn {
   -moz-border-radius: 0;

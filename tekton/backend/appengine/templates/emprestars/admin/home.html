@@ -16,7 +16,58 @@
                 <emprestarform  elementos="emprestars" toggleShow="toggleShow" ng-show="mostrarForm"></emprestarform>
                 <hr/>
                 <h2>{% trans %}List of Emprestars{% endtrans %}</h2>
-                <table class="table table-striped table-hover">
+            <!--
+            <tr ng-repeat="emprestar in emprestars track by $index">
+                <td><a href="{[{ emprestar.edit_path }]}" class="btn btn-success btn-sm"><i
+                        class="glyphicon glyphicon-pencil"></i></a></td>
+                <td>{[{ emprestar.id }]}</td>
+                <td>{[{ emprestar.creation }]}</td>
+                <td>{[{ emprestar.emprestar }]}</td>
+                <td>{[{ emprestar.pertence }]}</td>
+                <td>{[{ emprestar.descricao }]}</td>
+                <td>{[{ emprestar.nome }]}</td>
+                <td>
+                        <button class="btn btn-danger btn-sm" ng-click="deletar(emprestar)"
+                                ng-disabled="emprestar.deletando">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </button>
+                </td>
+            </tr>
+            -->
+
+                <ul class="row belongs-wrapper">
+                    <li class="col-md-6" ng-repeat="emprestar in emprestars track by $index">
+                        <div class="belong-item row">
+                            <img src="/static/img/product/canon.jpg" class="belongs-item-picture col-xs-6">
+                            <div class="belongs-item-info col-xs-6">
+                                <dl>
+                                    <dt class="belongs-item-name">{[{ emprestar.nome }]}</dt>
+                                    <dd class="belongs-item-description">{[{ emprestar.descricao }]}</dd>
+                                </dl>
+                                <a href="#">Ver detalhes</a>
+                            </div>
+                            <section class="belong-options">
+                                <button class="beleong-options-toggle" ng-click="belongOption = !belongOption"></button>
+                                <ul class="belong-options-buttons" ng-show="belongOption">
+                                    <li class="clearfix">
+                                        <button class="btn btn-danger btn-sm" ng-click="deletar(emprestar)"
+                                                ng-disabled="emprestar.deletando">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                        </button>
+                                    </li>
+                                    <li class="clearfix">
+                                       <a href="{[{ emprestar.edit_path }]}" class="btn btn-success btn-sm">
+                                           <i class="glyphicon glyphicon-pencil"></i>
+                                       </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+
+            <!--
+                            <table class="table table-striped table-hover">
                     <thead>
                     <tr>
                         <th/>
@@ -47,6 +98,7 @@
                         </tr>
                     </tbody>
                 </table>
+            -->
             </div>
         </div>
     </div>
