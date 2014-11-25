@@ -2,22 +2,22 @@
     <h1 class="text-center">Emprestar Form</h1>
 
     <form role="form">
-        <div class="form-group ">
+        <div class="form-group " ng-class="{'has-error': emprestar_error}">
             <label for="emprestarInput" class="control-label">Emprestar </label>
             <input id="emprestarInput" type="text" class="form-control" ng-model="emprestar">
         </div>
 
-        <div class="form-group ">
+        <div class="form-group " ng-class="{'has-error': pertence_error}">
             <label for="pertenceInput" class="control-label">Pertence </label>
             <input id="pertenceInput" type="text" class="form-control" ng-model="pertence" >
         </div>
 
-        <div class="form-group ">
+        <div class="form-group " ng-class="{'has-error': descricao_error}">
             <label for="descricaoInput" class="control-label">Descricao </label>
             <input id="descricaoInput" type="text" class="form-control" ng-model="descricao">
         </div>
 
-        <div class="form-group ">
+        <div class="form-group " ng-class="{'has-error': nome_error}">
             <label for="nomeInput" class="control-label">Nome </label>
             <input id="nomeInput" type="text" class="form-control" ng-model="nome">
         </div>

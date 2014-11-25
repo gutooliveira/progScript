@@ -34,6 +34,14 @@ def delete(_logged_user, emprestar_id):
     return JsonResponse({'id': emprestar_id})
 
 
+def edit(**emprestar_properties):
+    emprestar_id = emprestar_properties['emprestar_id']
+    pertence = Emprestar.get_by_id(emprestar_properties['emprestar_id'])
+    emprestar_properties.pop('emprestar_id')
+    pertence.populate(**emprestar_properties)
+    pertence.put()
+    return JsonResponse({'id': emprestar_id})
+
 def _save_or_update_json_response(cmd):
     try:
         emprestar = cmd()

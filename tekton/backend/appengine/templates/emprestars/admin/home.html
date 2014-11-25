@@ -17,24 +17,6 @@
                 <hr/>
                 <h2>{% trans %}List of Emprestars{% endtrans %}</h2>
             <!--
-            <tr ng-repeat="emprestar in emprestars track by $index">
-                <td><a href="{[{ emprestar.edit_path }]}" class="btn btn-success btn-sm"><i
-                        class="glyphicon glyphicon-pencil"></i></a></td>
-                <td>{[{ emprestar.id }]}</td>
-                <td>{[{ emprestar.creation }]}</td>
-                <td>{[{ emprestar.emprestar }]}</td>
-                <td>{[{ emprestar.pertence }]}</td>
-                <td>{[{ emprestar.descricao }]}</td>
-                <td>{[{ emprestar.nome }]}</td>
-                <td>
-                        <button class="btn btn-danger btn-sm" ng-click="deletar(emprestar)"
-                                ng-disabled="emprestar.deletando">
-                            <i class="glyphicon glyphicon-trash"></i>
-                        </button>
-                </td>
-            </tr>
-            -->
-
                 <ul class="row belongs-wrapper">
                     <li class="col-md-6" ng-repeat="emprestar in emprestars track by $index">
                         <div class="belong-item row">
@@ -56,18 +38,18 @@
                                         </button>
                                     </li>
                                     <li class="clearfix">
-                                       <a href="{[{ emprestar.edit_path }]}" class="btn btn-success btn-sm">
-                                           <i class="glyphicon glyphicon-pencil"></i>
-                                       </a>
+                                        <a href="{[{ emprestar.edit_path }]}" class="btn btn-success btn-sm">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </section>
                         </div>
                     </li>
                 </ul>
+            -->
 
-            <!--
-                            <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover">
                     <thead>
                     <tr>
                         <th/>
@@ -81,14 +63,35 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="emprestar in emprestars track by $index">
-                            <td><a href="{[{ emprestar.edit_path }]}" class="btn btn-success btn-sm"><i
-                                    class="glyphicon glyphicon-pencil"></i></a></td>
+                            <td>
+                                <div ng-show="editando">
+                                    <button ng-click="editar(emprestar);disable_editar()" class="btn btn-success"><i class="glyphicon glyphicon-trash"></i></button>
+                                    <button ng-click="disable_editar()" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+                                </div>
+                                <button ng-show="!editando && !salvando" ng-click="enable_editar()" class="btn btn-success btn-sm">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </button>
+
+                                <button ng-show="salvando" class="btn btn-success btn-sm">
+                                    Salvando
+                                </button>
+
+                            </td>
                             <td>{[{ emprestar.id }]}</td>
                             <td>{[{ emprestar.creation }]}</td>
                             <td>{[{ emprestar.emprestar }]}</td>
-                            <td>{[{ emprestar.pertence }]}</td>
-                            <td>{[{ emprestar.descricao }]}</td>
-                            <td>{[{ emprestar.nome }]}</td>
+                            <td>
+                                <span ng-show="!editando">{[{ emprestar.pertence }]}</span>
+                                <input ng-show="editando" ng-model="emprestar.pertence">
+                            </td>
+                            <td>
+                                <span ng-show="!editando">{[{ emprestar.descricao }]}</span>
+                                <input ng-show="editando" ng-model="emprestar.descricao">
+                            </td>
+                            <td>
+                                <span ng-show="!editando">{[{ emprestar.nome }]}</span>
+                                <input ng-show="editando" ng-model="emprestar.nome">
+                            </td>
                             <td>
                                     <button class="btn btn-danger btn-sm" ng-click="deletar(emprestar)"
                                             ng-disabled="emprestar.deletando">
@@ -98,7 +101,6 @@
                         </tr>
                     </tbody>
                 </table>
-            -->
             </div>
         </div>
     </div>
